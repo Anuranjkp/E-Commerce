@@ -29,7 +29,7 @@ router.get('/', function (req, res, next) {
       image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16touch-silver-select-201911?wid=1808&hei=1686&fmt=jpeg&qlt=80&.v=1572825196932"
     }
   ]
-  res.render('index', { products,admin:false});
+  res.render('index', {products});
 });
 
 module.exports = router;
