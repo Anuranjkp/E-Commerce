@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
 var db = require('./config/connection');
 var app = express();
+var Promise=require("promise");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(fileUpload())
+
 
 db.connect((err)=>{
   if(err) console.log("Database unable to connect"+err);
